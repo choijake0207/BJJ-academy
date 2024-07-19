@@ -48,8 +48,16 @@ export default function Login() {
     const {login} = useContext(AuthContext)
 
   return (
-    <LoginForm
-        handleLogin={login}
-    />
+    <div className="login">
+        <section>
+            <h3>Welcome to BJJ MGMT</h3>
+            <p>Login To Get Started</p>
+            <LoginForm
+                handleLogin={login}
+            />
+        </section>
+        
+    </div>
+       
   )
 }
