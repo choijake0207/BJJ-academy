@@ -1,3 +1,24 @@
+const Classes = [
+    {
+        id: 101,
+        name: "NoGi Fundamentals",
+        teacher: "Jane Doe",
+        students: [],
+        start: "04:00pm",
+        end: "06:00pm",
+        day: "Monday"
+    },
+    {
+        id: 102,
+        name: "Gi Fundamentals",
+        teacher: "Jane Doe",
+        students: [],
+        start: "04:00pm",
+        end: "06:00pm",
+        day: "Wednesday"
+    }
+]
+
 export const Users = [
     {
         id: 0,
@@ -21,23 +42,3 @@ export const Users = [
     }
 ]
 
-const Classes = [
-    {
-        id: 101,
-        name: "NoGi Fundamentals",
-        teacher: "Jane Doe",
-        students: [],
-        start: "04:00pm",
-        end: "06:00pm",
-        day: "Monday"
-    },
-    {
-        id: 102,
-        name: "Gi Fundamentals",
-        teacher: "Jane Doe",
-        students: [],
-        start: "04:00pm",
-        end: "06:00pm",
-        day: "Wednesday"
-    }
-]
