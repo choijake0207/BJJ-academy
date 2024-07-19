@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import {NavLink, Outlet} from "react-router-dom"
 import { AuthContext } from '../Context/AuthContext'
 import Login from '../Pages/Login'
+import "../Styles/Login.css"
 export default function RootLayout() {
   const {authUser} = useContext(AuthContext)
   return (
