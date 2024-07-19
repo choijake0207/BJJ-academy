@@ -14,6 +14,7 @@ export function AuthContextProvider ({children}) {
             alert("Incorrect Credentials")
         } else {
             setAuthUser(user)
+            localStorage.setItem("user", JSON.stringify(user))
             console.log("Login Success")
         }
     }
