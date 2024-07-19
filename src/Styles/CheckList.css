@@ -1,0 +1,19 @@
+.checklist-component {
+    /*background: var(--background-color);
+    box-shadow: 5px 5px 10px var(--box-shadow), -2px -2px 5px var(--box-highlight);*/
+    border-radius: 10px;
+    padding: 10px;
+}
+.checklist {
+    /*box-shadow: inset 5px 5px 5px var(--box-shadow), inset -5px -5px 5px var(--box-highlight);*/
+    border-radius: 10px;
+    height: 200px;
+    overflow: scroll;
+    padding: 0;
+}
+.list-item {
+    list-style-type: none;
+    border: 1px solid red;
+    margin: 10px;
+    /*background: var(--background-color);*/
+}
