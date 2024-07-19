@@ -15,6 +15,7 @@ export function AuthContextProvider ({children}) {
         setAuthUser(prev => {
             const updatedUser = {...prev, [property]: value}
             localStorage.setItem("user", JSON.stringify(updatedUser))
+            console.log(updatedUser)
             return updatedUser
         })
     }
