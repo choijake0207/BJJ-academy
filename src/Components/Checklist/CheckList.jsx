@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import CheckListForm  from './CheckListForm'
 import ListItem from './ListItem'
 import "../../Styles/CheckList.css"
@@ -9,21 +9,32 @@ export default function CheckList() {
     const {handlePropertyChange, authUser} = useContext(AuthContext)
     const [list, setList] = useState(authUser ? authUser.todos : [])
     const [formOn, setFormOn] = useState(false)
+
+    useEffect(() => {
+        handlePropertyChange("todos", list) 
+    }, [list])
+
     const handleAddGoal = (goal) => {
-        setList(prev => {
-            const updatedList = [...list, goal]
-            handlePropertyChange("todos", updatedList)
-            return updatedList
-        })
-        
+        setList(prev => [...prev, goal])
+    }
+    const handleCheckGoal = (id, status) => {
+        setList(prev => prev.map(goal => goal.id === id ? 
+            {...goal, completed: status} : goal
+        ))
+    }
+    const handleDeleteGoal = (id) => {
+        setList(prev => prev.filter(goal => goal.id !== id))
     }
   return (
-    <div className="checklist-component">
-        <h4>Training Goals</h4>
+    <section className="checklist-component">
+        <h2>Training Goals</h2>
         <ul className="checklist">
             {list.map(goal => 
                 <ListItem
+                    key={goal.id}
                     goal={goal}
+                    handleCheck={handleCheckGoal}
+                    handleDelete={handleDeleteGoal}
                 />
             )}
         </ul>
@@ -36,6 +47,6 @@ export default function CheckList() {
         }   
 
         
-    </div>
+    </section>
   )
 }
