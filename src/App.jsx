@@ -4,6 +4,7 @@ import RootLayout from './Layouts/RootLayout'
 import Dashboard from './Pages/Dashboard'
 import Classes from './Pages/Classes'
 import Account from './Pages/Account'
+import { AuthContextProvider } from './Context/AuthContext'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,9 @@ const router = createBrowserRouter(
 
 export default function App() {
   return (
-    <RouterProvider router={router}/>
+    <AuthContextProvider>
+      <RouterProvider router={router}/>
+    </AuthContextProvider>
+    
   )
 }
