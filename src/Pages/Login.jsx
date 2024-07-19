@@ -1,7 +1,11 @@
 import React, {useContext, useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext'
 
+
 export function LoginForm ({handleLogin}) {
+    const navigate = useNavigate()
+
     const [form, setForm] = useState({
         username: "",
         password: ""
@@ -13,6 +17,8 @@ export function LoginForm ({handleLogin}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         handleLogin(form)
+        navigate("/")
+        
     }
 
     return (
