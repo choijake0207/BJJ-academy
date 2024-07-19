@@ -1,8 +1,10 @@
-# React + Vite
+## BJJ Academy MGMT 
+This project is a front-end only mock-up of a management system for a Brazilian Jiu-Jitsu academy. It serves dual user models (member and admin) and features simple interactions such as maintaining a to-do list, enrolling in classes, creating class schedules, and more. As a BJJ practitioner, I wanted to experiment with what user needs are most critical when developing mgmt systems.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Considerations
+As a front-end only application, there are some architectural decisions that must be noted. Without the use of a database or APIs, there is some atypical code that wouldn't adhere to full stack architecture. Instances include:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dummy user objects
+- Global state of users and user properties
+- No authentication middleware
+- No persistent authenticator
