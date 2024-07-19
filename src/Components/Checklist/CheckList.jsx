@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import CheckListForm  from './CheckListForm'
 import ListItem from './ListItem'
+import "../../Styles/CheckList.css"
 
 export default function CheckList() {
     const [list, setList] = useState([])
