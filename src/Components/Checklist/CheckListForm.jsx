@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export function CheckListForm ({addGoal}) {
+export default function CheckListForm ({addGoal}) {
     const [goal, setGoal] = useState({
         text: "",
         category: "",
@@ -47,6 +47,7 @@ export function CheckListForm ({addGoal}) {
                 <option value="backcontrol">Back Control</option>
                 <option value="turtle">Turtle</option>
             </select>
+            <button type="submit">Create</button>
 
         </form>
         
