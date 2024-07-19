@@ -25,6 +25,14 @@ body {
     box-shadow: 3px 0px 10px var(--box-shadow);
     
 }
+.nav-header {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+.nav-header img {
+    height: 50px;
+}
 .root-nav button {
     margin-top: auto;
     margin-bottom: 50px;
