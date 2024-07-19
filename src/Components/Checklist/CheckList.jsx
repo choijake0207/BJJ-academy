@@ -6,8 +6,8 @@ import { AuthContext } from '../../Context/AuthContext'
 
 
 export default function CheckList() {
-    const {handlePropertyChange} = useContext(AuthContext)
-    const [list, setList] = useState([])
+    const {handlePropertyChange, authUser} = useContext(AuthContext)
+    const [list, setList] = useState(authUser ? authUser.todos : [])
     const [formOn, setFormOn] = useState(false)
     const handleAddGoal = (goal) => {
         setList(prev => {
