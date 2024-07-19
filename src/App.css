@@ -1,6 +1,15 @@
 /* Global and Root Styles */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --background-color: rgb(240, 240, 240);
+    --box-shadow: rgb(216, 216, 216);
+    --box-highlight: white;
+}
 body {
     margin: 0;
+    background: var(--background-color);
+    font-family: "rubik";
 }
 .root-layout {
     display: grid;
@@ -10,12 +19,29 @@ body {
 .root-nav {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     gap: 20px;
     padding: 15px;
+    background: var(--background-color);
+    box-shadow: 3px 0px 10px var(--box-shadow);
+    
 }
 .root-nav button {
     margin-top: auto;
     margin-bottom: 50px;
+}
+.root-main {
+    padding: 20px;
+}
+    /* Page Layout */
+
+.page-header {
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px var(--box-shadow),
+    -2px -2px 5px var(--box-highlight);
 }
 
