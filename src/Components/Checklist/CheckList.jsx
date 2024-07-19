@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import CheckListForm  from './CheckListForm'
 import ListItem from './ListItem'
 import "../../Styles/CheckList.css"
+import { AuthContext } from '../../Context/AuthContext'
+
 
 export default function CheckList() {
+    const {handlePropertyChange} = useContext(AuthContext)
     const [list, setList] = useState([])
     const [formOn, setFormOn] = useState(false)
     const handleAddGoal = (goal) => {
-        setList(prev => [...prev, goal])
+        setList(prev => {
+            const updatedList = [...list, goal]
+            handlePropertyChange("todos", updatedList)
+            return updatedList
+        })
+        
     }
   return (
     <div className="checklist-component">
