@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function CheckListForm ({addGoal}) {
+export default function CheckListForm ({addGoal, exitForm}) {
     const [goal, setGoal] = useState({
         text: "",
         category: "",
@@ -18,10 +18,11 @@ export default function CheckListForm ({addGoal}) {
             category: "",
             id: crypto.randomUUID()
         })
-
+        exitForm()
     }
     return (
         <form className="checklist-form" onSubmit={handleSubmit}>
+            <button onClick={exitForm}>Exit</button>
             <label>
                 What Is Your Goal?
             </label>
