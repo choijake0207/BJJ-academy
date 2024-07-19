@@ -1,4 +1,4 @@
-export const users = [
+export const Users = [
     {
         id: 0,
         firstName: "John",
@@ -6,7 +6,7 @@ export const users = [
         username: "johndoe",
         password: "johndoe",
         todos: [],
-        classes: [],
+        attending: [Classes[0], Classes[1]],
         role: "member"
     },
     {
@@ -16,7 +16,28 @@ export const users = [
         username: "janedoe",
         password: "janedoe",
         todos: [],
-        classes: [],
+        teaching: [Classes[0], Classes[1]],
         role: "admin"
+    }
+]
+
+const Classes = [
+    {
+        id: 101,
+        name: "NoGi Fundamentals",
+        teacher: "Jane Doe",
+        students: [],
+        start: "04:00pm",
+        end: "06:00pm",
+        day: "Monday"
+    },
+    {
+        id: 102,
+        name: "Gi Fundamentals",
+        teacher: "Jane Doe",
+        students: [],
+        start: "04:00pm",
+        end: "06:00pm",
+        day: "Wednesday"
     }
 ]
