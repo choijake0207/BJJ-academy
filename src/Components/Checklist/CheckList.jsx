@@ -22,6 +22,7 @@ export default function CheckList() {
         {formOn  && 
             <CheckListForm
                 addGoal={handleAddGoal}
+                exitForm={() => setFormOn(false)}
             />
         }   
 
