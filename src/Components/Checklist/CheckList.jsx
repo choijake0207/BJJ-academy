@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { CheckListForm } from './CheckListForm'
+import CheckListForm  from './CheckListForm'
+import ListItem from './ListItem'
 
 export default function CheckList() {
     const [list, setList] = useState([])
@@ -11,11 +12,11 @@ export default function CheckList() {
     <div className="checklist-component">
         <h4>Training Goals</h4>
         <ul className="checklist">
-            {list.map(goal => {
-                return (
-                    <p>{goal.text}</p>
-                )
-            })}
+            {list.map(goal => 
+                <ListItem
+                    goal={goal}
+                />
+            )}
         </ul>
         <button onClick={() => setFormOn(true)}>Add Goal</button>
         {formOn  && 
