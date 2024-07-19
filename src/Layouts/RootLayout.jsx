@@ -10,7 +10,11 @@ export default function RootLayout() {
       {authUser ? 
         <div className="root-layout">
           <nav className="root-nav">
-            <h1>BJJ MGMT</h1>
+            <div className="nav-header">
+              <img src="src/Assets/bjj_belts_logo_icon (1).svg"/>
+              <h1>BJJ MGMT</h1>
+            </div>
+            
             <NavLink to="/">Dashboard</NavLink>
             <NavLink to="/classes">Classes</NavLink>
             <NavLink to="/account">Account</NavLink>
