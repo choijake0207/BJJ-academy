@@ -7,7 +7,7 @@ export default function ListItem({goal, handleCheck, handleDelete}) {
           type="checkbox"
           value={goal.completed}
           checked={goal.completed === true}
-          onChange={(e) => handleCheck(e.target.checked)}
+          onChange={(e) => handleCheck(goal.id, e.target.checked)}
         />
         <h4>{goal.text}</h4>
         <p><i>{goal.category}</i></p>
