@@ -4,6 +4,7 @@ export default function CheckListForm ({addGoal, exitForm}) {
     const [goal, setGoal] = useState({
         text: "",
         category: "",
+        completed: false,
         id: crypto.randomUUID()
     })
     const handleChange = (e) => {
@@ -16,6 +17,7 @@ export default function CheckListForm ({addGoal, exitForm}) {
         setGoal({
             text: "",
             category: "",
+            completed: false,
             id: crypto.randomUUID()
         })
         exitForm()
