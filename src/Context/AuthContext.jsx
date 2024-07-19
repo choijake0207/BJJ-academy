@@ -25,7 +25,12 @@ export function AuthContextProvider ({children}) {
         }
     }
 
-    const values = {authUser, login}
+    const logout = () => {
+        localStorage.removeItem("user")
+        setAuthUser(null)
+        console.log("Logged Out Succesfully")
+    }
+    const values = {authUser, login, logout}
 
 
     return (
