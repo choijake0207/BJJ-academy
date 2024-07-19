@@ -5,9 +5,9 @@ import Login from '../Pages/Login'
 export default function RootLayout() {
   const {authUser} = useContext(AuthContext)
   return (
-    <div className="root-layout">
+    <>
       {authUser ? 
-        <>
+        <div className="root-layout">
           <nav className="root-nav">
             <h1>BJJ MGMT</h1>
             <NavLink to="/">Dashboard</NavLink>
@@ -16,9 +16,9 @@ export default function RootLayout() {
             <button>Log Out</button>
           </nav>
           <main className="root-main"><Outlet/></main>
-        </> : <Login/>}
-       
-       
-    </div>
+        </div> : 
+        <Login/>
+      } 
+    </>
   )
 }
