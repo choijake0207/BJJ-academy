@@ -4,7 +4,7 @@ import { AuthContext } from '../Context/AuthContext'
 import Login from '../Pages/Login'
 import "../Styles/Login.css"
 export default function RootLayout() {
-  const {authUser} = useContext(AuthContext)
+  const {authUser, logout} = useContext(AuthContext)
   return (
     <>
       {authUser ? 
@@ -14,7 +14,7 @@ export default function RootLayout() {
             <NavLink to="/">Dashboard</NavLink>
             <NavLink to="/classes">Classes</NavLink>
             <NavLink to="/account">Account</NavLink>
-            <button>Log Out</button>
+            <button onClick={logout}>Log Out</button>
           </nav>
           <main className="root-main"><Outlet/></main>
         </div> : 
