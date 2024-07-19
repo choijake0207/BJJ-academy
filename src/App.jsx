@@ -8,21 +8,16 @@ import { AuthContext, AuthContextProvider } from './Context/AuthContext'
 import Login from './Pages/Login'
 import "./App.css"
 
-const ProtectedRoute = () => {
-  const {authUser} = useContext(AuthContext)
-  return authUser ? <Outlet/> : <Navigate to="/login"/>
-}
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
       <Route path="/login" element={<Login/>}/>
-      <Route element={<ProtectedRoute/>}>
-        <Route index element={<Dashboard/>}/>
-        <Route path="/classes" element={<Classes/>}/>
-        <Route path="/account" element={<Account/>}/>
-      </Route>
+      <Route index element={<Dashboard/>}/>
+      <Route path="/classes" element={<Classes/>}/>
+      <Route path="/account" element={<Account/>}/>
+
     </Route>
   )
 )
