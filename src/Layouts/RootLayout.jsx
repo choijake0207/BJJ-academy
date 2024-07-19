@@ -5,6 +5,7 @@ export default function RootLayout() {
   return (
     <div className="root-layout">
         <nav className="root-nav">
+            <h1>BJJ MGMT</h1>
             <NavLink to="/">Dashboard</NavLink>
             <NavLink to="/classes">Classes</NavLink>
             <NavLink to="/account">Account</NavLink>
