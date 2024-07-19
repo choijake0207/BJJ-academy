@@ -6,6 +6,7 @@ import Classes from './Pages/Classes'
 import Account from './Pages/Account'
 import { AuthContext, AuthContextProvider } from './Context/AuthContext'
 import Login from './Pages/Login'
+import "./App.css"
 
 const ProtectedRoute = () => {
   const {authUser} = useContext(AuthContext)
