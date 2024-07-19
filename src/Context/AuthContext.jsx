@@ -11,7 +11,13 @@ export function AuthContextProvider ({children}) {
         return savedUser ? JSON.parse(savedUser) : null
     })
 
-    
+    const handlePropertyChange = (property, value) => {
+        setAuthUser(prev => {
+            const updatedUser = {...prev, [property]: value}
+            localStorage.setItem("user", JSON.stringify(updatedUser))
+            return updatedUser
+        })
+    }
 
     const login = ({username, password}) => {
         const user = Users.find(user => user.username === username && user.password === password)
@@ -30,7 +36,7 @@ export function AuthContextProvider ({children}) {
         setAuthUser(null)
         console.log("Logged Out Succesfully")
     }
-    const values = {authUser, login, logout}
+    const values = {authUser, login, logout, handlePropertyChange}
 
 
     return (
