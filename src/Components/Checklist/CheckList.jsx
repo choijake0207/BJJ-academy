@@ -5,7 +5,7 @@ import "../../Styles/CheckList.css"
 import { AuthContext } from '../../Context/AuthContext'
 
 
-export default function CheckList() {
+export default function CheckList({isStudent}) {
     const {handlePropertyChange, authUser} = useContext(AuthContext)
     const [list, setList] = useState(authUser ? authUser.todos : [])
     const [formOn, setFormOn] = useState(false)
@@ -14,34 +14,34 @@ export default function CheckList() {
         handlePropertyChange("todos", list) 
     }, [list])
 
-    const handleAddGoal = (goal) => {
-        setList(prev => [...prev, goal])
+    const handleAddItem = (item) => {
+        setList(prev => [...prev, item])
     }
-    const handleCheckGoal = (id, status) => {
-        setList(prev => prev.map(goal => goal.id === id ? 
-            {...goal, completed: status} : goal
+    const handleCheckItem = (id, status) => {
+        setList(prev => prev.map(item => item.id === id ? 
+            {...item, completed: status} : item
         ))
     }
-    const handleDeleteGoal = (id) => {
-        setList(prev => prev.filter(goal => goal.id !== id))
+    const handleDeleteItem = (id) => {
+        setList(prev => prev.filter(item => item.id !== id))
     }
   return (
     <section className="checklist-component">
-        <h2>Training Goals</h2>
+        <h2>{isStudent ? "Training Goals" : "Admin To Do's"}</h2>
         <ul className="checklist">
-            {list.map(goal => 
+            {list.map(item => 
                 <ListItem
-                    key={goal.id}
-                    goal={goal}
-                    handleCheck={handleCheckGoal}
-                    handleDelete={handleDeleteGoal}
+                    key={item.id}
+                    item={item}
+                    handleCheck={handleCheckItem}
+                    handleDelete={handleDeleteItem}
                 />
             )}
         </ul>
-        <button onClick={() => setFormOn(true)}>Add Goal</button>
+        <button onClick={() => setFormOn(true)}>{isStudent ? "Add Goal" : "Add To Do"}</button>
         {formOn  && 
             <CheckListForm
-                addGoal={handleAddGoal}
+                addGoal={handleAddItem}
                 exitForm={() => setFormOn(false)}
             />
         }   

@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function ListItem({goal, handleCheck, handleDelete}) {
+export default function ListItem({item, handleCheck, handleDelete}) {
   return (
     <li className="list-item">
         <input
           type="checkbox"
-          value={goal.completed}
-          checked={goal.completed === true}
-          onChange={(e) => handleCheck(goal.id, e.target.checked)}
+          value={item.completed}
+          checked={item.completed === true}
+          onChange={(e) => handleCheck(item.id, e.target.checked)}
         />
-        <h4>{goal.text}</h4>
-        <p><i>{goal.category}</i></p>
-        <button onClick={() => handleDelete(goal.id)}>Delete</button>
+        <h4>{item.text}</h4>
+        <p><i>{item.category}</i></p>
+        <button onClick={() => handleDelete(item.id)}>Delete</button>
     </li>
   )
 }
