@@ -15,9 +15,6 @@ export default function RootLayout() {
           </header>
           <div className="content-columns">
             <nav className="side-nav-bar">
-              <div className="nav-header">
-                <h3>Welcome {authUser.firstName}</h3>
-              </div>
               
               <NavLink to="/">Dashboard</NavLink>
               <NavLink to="/classes">Classes</NavLink>
