@@ -10,7 +10,7 @@ export default function Dashboard() {
   const isStudent = authUser.role === "member"
   return (
     <PageLayout pageType={"Dashboard"}>
-      <div className={isStudent ? "student dashboard" : "admin dashboard"}>
+      <div className="dashboard">
         {!isStudent && <AnalyticsWidget/>}
         <CheckList
           isStudent={isStudent}
