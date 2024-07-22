@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-    --background-color: rgb(240, 240, 240);
+    /*--background-color: rgb(240, 240, 240);
     --box-shadow: rgb(216, 216, 216);
-    --box-highlight: white;
+    --box-highlight: white;*/
 }
 body {
     margin: 0;
@@ -14,28 +14,55 @@ body {
 .root-layout {
     display: grid;
     height: 100vh;
-    grid-template-columns: 225px 1fr;
+    grid-template-rows: 60px 1fr;
 }
-.root-nav {
+.header {
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+}
+.header img {
+    height: 50px;
+}
+
+.content-columns {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+
+
+
+
+
+
+
+.side-nav-bar {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 15px;
+    background: rgb(38, 93, 196);
     /*background: var(--background-color);
     box-shadow: 3px 0px 10px var(--box-shadow);*/
     
 }
-.nav-header {
-    display: flex;
-    align-items: center;
-    font-style: italic;
+.side-nav-bar a {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
 }
-.nav-header img {
-    height: 50px;
-}
-.root-nav button {
+
+.side-nav-bar button {
     margin-top: auto;
     margin-bottom: 50px;
+    background: none;
+    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
 }
 .root-main {
     padding: 20px;
@@ -52,5 +79,6 @@ body {
     /*box-shadow: 5px 5px 10px var(--box-shadow),
     -2px -2px 5px var(--box-highlight);*/
     margin-bottom: 20px;
+    border: 1px solid black;
 }
 
