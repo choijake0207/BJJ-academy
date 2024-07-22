@@ -57,7 +57,7 @@ export const Users = [
         password: "johndoe",
         todos: [],
         attending: [Classes[0], Classes[1]],
-        role: "member",
+        role: "Student",
         membership: {
             type: "standard",
             start: "2021-7-12"
@@ -71,21 +71,21 @@ export const Users = [
         password: "janedoe",
         todos: [],
         teaching: [Classes[0], Classes[1]],
-        role: "admin"
+        role: "Coach"
     },
     {
         id: 2,
         firstName: "Gordon",
         lastName: "Ryan",
         teaching: [Classes[3]],
-        role: "admin"
+        role: "Coach"
     },
     {
         id: 3,
         firstName: "Nicky",
         lastName: "Ryan",
         attending: [Classes[3], Classes[4]],
-        role: "member",
+        role: "Student",
         membership: {
             type: "premium",
             start: "2017-1-11"
