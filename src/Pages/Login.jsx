@@ -23,19 +23,19 @@ export function LoginForm ({handleLogin}) {
 
     return (
         <form className="login-form" onSubmit={handleSubmit}>
-            <label>Username</label>
             <input
                 type="text"
                 name="username"
                 value={form.username}
                 onChange={(e) => handleChange(e)}
+                placeholder="Username"
             />
-            <label>Password</label>
             <input
                 type="password"
                 name="password"
                 value={form.password}
                 onChange={(e) => handleChange(e)}
+                placeholder="Password"
             />
             <button type="submit">Log In</button>
         </form>
