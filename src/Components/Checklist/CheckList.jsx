@@ -43,6 +43,7 @@ export default function CheckList({isStudent}) {
             <CheckListForm
                 addGoal={handleAddItem}
                 exitForm={() => setFormOn(false)}
+                isStudent={isStudent}
             />
         }   
 
