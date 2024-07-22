@@ -2,83 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-    /*--background-color: rgb(240, 240, 240);
-    --box-shadow: rgb(216, 216, 216);
-    --box-highlight: white;*/
+    --background-color: rgb(220, 224, 234);
+    --component-background: rgb(254, 254, 254);
 }
 body {
     margin: 0;
-    /*background: var(--background-color);*/
+    background: var(--background-color);
     font-family: "rubik";
 }
 .root-layout {
     display: grid;
     height: 100vh;
-    grid-template-rows: 60px 1fr;
+    grid-template-rows: 50px 1fr;
 }
 .header {
-    border: 2px solid blue;
     display: flex;
     align-items: center;
+    background: var(--component-background);
+    font-size: .7em;
+    letter-spacing: 1.25px;
+    box-shadow: 0px 5px 5px rgb(190, 190, 190);
 }
 .header img {
     height: 50px;
 }
-
 .content-columns {
     display: grid;
     grid-template-columns: 200px 1fr;
 }
-
-
-
-
-
-
-
-
 .side-nav-bar {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 15px;
-    background: rgb(38, 93, 196);
-    /*background: var(--background-color);
-    box-shadow: 3px 0px 10px var(--box-shadow);*/
-    
+    background: rgb(25,27,36);
+    color: white; 
 }
 .side-nav-bar a {
     text-decoration: none;
-    border: 1px solid white;
     padding: 10px;
     border-radius: 10px;
     color: white;
 }
+.side-nav-bar .active {
+    background: white;
+    color: black;
+}
+
 
 .side-nav-bar button {
     margin-top: auto;
     margin-bottom: 50px;
     background: none;
-    border: 1px solid black;
-    color: white;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     padding: 10px;
+    color: white;
 }
 .root-main {
-    padding: 20px;
+    padding: 15px;
 }
     /* Page Layout */
 
 .page-header {
-    /*background: var(--background-color);*/
+    background: var(--component-background);
     display: flex;
     align-items: center;
     padding: 20px;
     font-size: 1.5em;
     border-radius: 10px;
-    /*box-shadow: 5px 5px 10px var(--box-shadow),
-    -2px -2px 5px var(--box-highlight);*/
     margin-bottom: 20px;
     border: 1px solid black;
+    font-weight:100;
 }
+
 
