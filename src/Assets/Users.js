@@ -3,7 +3,7 @@ const Classes = [
         id: 101,
         name: "NoGi Fundamentals",
         teacher: "Jane Doe",
-        students: [],
+        students: [{id: 0}],
         start: "04:00pm",
         end: "06:00pm",
         day: "Monday"
@@ -12,7 +12,7 @@ const Classes = [
         id: 102,
         name: "Gi Fundamentals",
         teacher: "Jane Doe",
-        students: [],
+        students: [{id: 0}],
         start: "04:00pm",
         end: "06:00pm",
         day: "Wednesday"
@@ -21,7 +21,7 @@ const Classes = [
         id: 103,
         name: "NoGi Advanced",
         teacher: "Gordon Ryan",
-        students: [],
+        students: [{id: 3}],
         start: "7:00pm",
         end: "9:00pn",
         day: "Tuesday"
@@ -30,7 +30,7 @@ const Classes = [
         id: 104,
         name: "Open Mat",
         teacher: "",
-        students: [],
+        students: [{id: 3}],
         start: "11:00am",
         end: "1:00pm",
         day: "Sunday"
