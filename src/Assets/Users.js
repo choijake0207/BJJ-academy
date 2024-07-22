@@ -16,6 +16,24 @@ const Classes = [
         start: "04:00pm",
         end: "06:00pm",
         day: "Wednesday"
+    },
+    {
+        id: 103,
+        name: "NoGi Advanced",
+        teacher: "Gordon Ryan",
+        students: [],
+        start: "7:00pm",
+        end: "9:00pn",
+        day: "Tuesday"
+    }, 
+    {
+        id: 104,
+        name: "Open Mat",
+        teacher: "",
+        students: [],
+        start: "11:00am",
+        end: "1:00pm",
+        day: "Sunday"
     }
 ]
 
@@ -54,6 +72,24 @@ export const Users = [
         todos: [],
         teaching: [Classes[0], Classes[1]],
         role: "admin"
+    },
+    {
+        id: 2,
+        firstName: "Gordon",
+        lastName: "Ryan",
+        teaching: [Classes[3]],
+        role: "admin"
+    },
+    {
+        id: 3,
+        firstName: "Nicky",
+        lastName: "Ryan",
+        attending: [Classes[3], Classes[4]],
+        role: "member",
+        membership: {
+            type: "premium",
+            start: "2017-1-11"
+        }
     }
 ]
 
