@@ -41,7 +41,7 @@ export default function CheckList({isStudent}) {
         <button onClick={() => setFormOn(true)}>{isStudent ? "Add Goal" : "Add To Do"}</button>
         {formOn  && 
             <CheckListForm
-                addGoal={handleAddItem}
+                addItem={handleAddItem}
                 exitForm={() => setFormOn(false)}
                 isStudent={isStudent}
             />
