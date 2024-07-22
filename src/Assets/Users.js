@@ -19,6 +19,17 @@ const Classes = [
     }
 ]
 
+const Memberships = {
+    standard: {
+        month: 100,
+        year: 1200
+    },
+    premium: {
+        month: 150,
+        year: 1800
+    }
+}
+
 export const Users = [
     {
         id: 0,
@@ -28,7 +39,11 @@ export const Users = [
         password: "johndoe",
         todos: [],
         attending: [Classes[0], Classes[1]],
-        role: "member"
+        role: "member",
+        membership: {
+            type: "standard",
+            start: "2021-7-12"
+        }
     },
     {
         id: 1,
