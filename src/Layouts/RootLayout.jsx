@@ -21,6 +21,13 @@ export default function RootLayout() {
               
               <NavLink to="/">Dashboard</NavLink>
               <NavLink to="/classes">Classes</NavLink>
+              {authUser.role === "admin" && 
+                <>
+                  <NavLink to="/analytics">Analytics</NavLink>
+                  <NavLink to="/members">Members</NavLink>
+                  <NavLink to="/employees">Employees</NavLink>
+                </>
+              }
               <NavLink to="/account">Account</NavLink>
               <button onClick={logout}>Log Out</button>
             </nav>
