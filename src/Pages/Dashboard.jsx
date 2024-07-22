@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import PageLayout from '../Layouts/PageLayout'
 import CheckList from '../Components/Checklist/CheckList'
-import AnalyticsWidget from '../Components/Analytics/AnalyticsWidget'
+import AnalyticsBar from '../Components/Analytics/AnalyticsBar'
 import "../Styles/Dashboard.css"
 import { AuthContext } from '../Context/AuthContext'
 export default function Dashboard() {
@@ -11,7 +11,7 @@ export default function Dashboard() {
   return (
     <PageLayout pageType={"Dashboard"}>
       <div className="dashboard">
-        {!isStudent && <AnalyticsWidget/>}
+        {!isStudent && <AnalyticsBar/>}
         <CheckList
           isStudent={isStudent}
         />
