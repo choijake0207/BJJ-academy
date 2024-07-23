@@ -1,5 +1,6 @@
 import React from 'react'
 import PageLayout from "../Layouts/PageLayout"
+import "../Styles/Account.css"
 
 export default function Account () {
 
