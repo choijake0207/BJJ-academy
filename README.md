@@ -2,10 +2,10 @@
 This project is a front-end only mock-up of a management system for a Brazilian Jiu-Jitsu academy. It serves dual user models (member and admin) and features simple interactions such as maintaining a to-do list, enrolling in classes, creating class schedules, and more. As a BJJ practitioner, I wanted to experiment with what user needs are most critical when developing mgmt systems.
 
 Login Methods:
-- Member:
+- Student:
     - Username: johndoe
     - Password: johndoe
-- Admin:
+- Coach:
     - Username: janedoe
     - Password: janedoe
 
