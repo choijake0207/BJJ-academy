@@ -1,0 +1,36 @@
+.account {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 15px;
+}
+.account-nav-bar {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.account-nav-bar button {
+    border: none;
+    background: none;
+    font-family: rubik;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.538);
+    cursor: pointer;
+    transition: .3s;
+}
+button.active {
+    color: black;
+    position:relative;
+}
+button.active::before {
+    position: absolute;
+    content: "";
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7px solid var(--flash-1);
+    left: -10px;
+    top: 50%;
+    transform: translateY(-60%);
+}
