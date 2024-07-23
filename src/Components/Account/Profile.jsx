@@ -1,10 +1,10 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {User, Pencil} from "phosphor-react"
 import {AuthContext} from "../../Context/AuthContext"
 
 
 export default function Profile() {
-    const {authUser} = useContext(AuthContext)
+    const {authUser, handlePropertyChange} = useContext(AuthContext)
     const profileUser = authUser //make seperate const for profile User for viewing other accounts
     const [isEdit, setIsEdit] = useState(false)
     const [editData, setEditData] = useState({
@@ -12,11 +12,21 @@ export default function Profile() {
         lastName: profileUser.lastName,
         email: profileUser.email,
         phone: profileUser.phone,
-        emergencyContact: profileUser.emergency.contact
+        emergency: profileUser.emergency
     })
     const handleEditChange  = (e) => {
         const {name, value} = e.target
+        setEditData(prev => ({...prev, [name]: value}))
     }
+    const toggleEdit = () => {
+        if (isEdit) {
+            for (const property in editData) {
+                handlePropertyChange(property, editData[property])
+            }
+        }
+        setIsEdit(!isEdit)
+    }
+   
   return (
     <div className="profile">
         <section className="public-info">
@@ -70,15 +80,13 @@ export default function Profile() {
                 {isEdit ? 
                     <input
                         type="phone"
-                        name="emergency.contact"
-                        value={editData.emergencyContact}
+                        name="emergency"
+                        value={editData.emergency}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.emergency.contact}</p>
+                    /> : <p>{profileUser.emergency}</p>
                 }
             </div>
-            <button
-                onClick={() => setIsEdit(!isEdit)}
-            >
+            <button onClick={toggleEdit}>
                 {isEdit ? "Save" : <><Pencil/>Edit</>}
             </button>
         </section>
