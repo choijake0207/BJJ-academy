@@ -55,6 +55,12 @@ export const Users = [
         lastName: "Doe",
         username: "johndoe",
         password: "johndoe",
+        email: "johndoe@email.com",
+        phone: "000-000-0000",
+        emergency: {
+            relation: "Friend",
+            contact: "000-000-0000"
+        },
         todos: [],
         attending: [Classes[0], Classes[1]],
         role: "Student",
@@ -69,6 +75,12 @@ export const Users = [
         lastName: "Doe",
         username: "janedoe",
         password: "janedoe",
+        email: "janedoe@email.com",
+        phone: "000-000-0000",
+        emergency: {
+            relation: "Sibling",
+            contact: "000-000-0000"
+        },
         todos: [],
         teaching: [Classes[0], Classes[1]],
         role: "Coach"
