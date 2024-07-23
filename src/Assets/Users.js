@@ -37,16 +37,20 @@ export const Classes = [
     }
 ]
 
-export const Memberships = {
-    standard: {
+export const Memberships = [
+    {
+        id: 0,
+        type: "Standard",
         month: 100,
         year: 1200
     },
-    premium: {
+    {
+        id: 1,
+        type: "Premium",
         month: 150,
         year: 1800
     }
-}
+]
 
 export const Users = [
     {
@@ -62,7 +66,7 @@ export const Users = [
         attending: [Classes[0], Classes[1]],
         role: "Student",
         membership: {
-            type: "standard",
+            type: "Standard",
             start: "2021-7-12"
         }
     },
@@ -93,7 +97,7 @@ export const Users = [
         attending: [Classes[3], Classes[4]],
         role: "Student",
         membership: {
-            type: "premium",
+            type: "Premium",
             start: "2017-1-11"
         }
     }
