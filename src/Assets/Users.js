@@ -1,4 +1,4 @@
-const Classes = [
+export const Classes = [
     {
         id: 101,
         name: "NoGi Fundamentals",
@@ -37,7 +37,7 @@ const Classes = [
     }
 ]
 
-const Memberships = {
+export const Memberships = {
     standard: {
         month: 100,
         year: 1200
@@ -57,10 +57,7 @@ export const Users = [
         password: "johndoe",
         email: "johndoe@email.com",
         phone: "000-000-0000",
-        emergency: {
-            relation: "Friend",
-            contact: "000-000-0000"
-        },
+        emergency: "111-111-1111",
         todos: [],
         attending: [Classes[0], Classes[1]],
         role: "Student",
@@ -77,10 +74,7 @@ export const Users = [
         password: "janedoe",
         email: "janedoe@email.com",
         phone: "000-000-0000",
-        emergency: {
-            relation: "Sibling",
-            contact: "000-000-0000"
-        },
+        emergency: "111-111-1111",
         todos: [],
         teaching: [Classes[0], Classes[1]],
         role: "Coach"
