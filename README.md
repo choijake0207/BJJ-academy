@@ -18,4 +18,4 @@ As a front-end only application, there are some architectural decisions that mus
 - No persistent authenticator
 
 ## WIP Screen Shots
-![Account WIP Image] (./wip/Screenshot 2024-07-23 at 15.38.02.png)
+![Account WIP Image](./wip/Screenshot 2024-07-23 at 15.38.02.png)
