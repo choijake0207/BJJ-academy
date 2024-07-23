@@ -4,17 +4,19 @@ import { Memberships } from '../../Assets/Users'
 
 export default function MembershipPlans() {
     const {authUser} = useContext(AuthContext)
+    const profileUser = authUser // need to refactor to accept navig params for admins
   return (
     <section className="membership-plans">
         <h3>Available Plans</h3>
         <div className="plans-container">
             {Memberships.map(plan => {
                 return (
-                    <div className="plan" key={plan.id}>
+                    <div className={profileUser.membership.type === plan.type ? "active plan": "plan"} id={plan.type}key={plan.id}>
                         <header>
-                            <h3>{plan.type}</h3>
-                            <h3>${plan.month}/month</h3>
+                            <h4>{plan.type}</h4>
+                            <h4>${plan.month}/month</h4>
                         </header>
+                        <p><i>Annual Sum: {plan.year}</i></p>
                         <button>Cancel</button> 
                     </div>
                 )
