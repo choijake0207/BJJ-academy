@@ -17,11 +17,11 @@ export default function Account () {
         return <Profile/>
     }
   }
-
+// refactor nav bar into navLinks
   return (
     <PageLayout pageType={"Account"}>
-      <div className="account">
-        <nav className="account-nav-bar">
+      <div className="account"> 
+        <nav className="account-nav-bar"> 
           <button 
             onClick={() => setActiveComponent("profile")}
             className={activeComponent === "profile" ? "active" : null}>
