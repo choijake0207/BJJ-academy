@@ -16,3 +16,6 @@ As a front-end only application, there are some architectural decisions that mus
 - Global state of users and user properties
 - No authentication middleware
 - No persistent authenticator
+
+## WIP Screen Shots
+![Account WIP Image] (./wip/Screenshot 2024-07-23 at 15.38.02.png)
