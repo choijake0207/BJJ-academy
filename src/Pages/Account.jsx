@@ -1,10 +1,22 @@
 import React, {useState} from 'react'
 import PageLayout from "../Layouts/PageLayout"
+import Profile from '../Components/Account/Profile'
+import Membership from '../Components/Account/Membership'
 import "../Styles/Account.css"
 
 export default function Account () {
 
   const [activeComponent, setActiveComponent] = useState("profile")
+  const renderProfileComponent = () => {
+    switch (activeComponent) {
+      case "profile":
+        return <Profile/>
+      case "membership":
+        return <Membership/>
+      default:
+        return <Profile/>
+    }
+  }
 
   return (
     <PageLayout pageType={"Account"}>
@@ -21,9 +33,9 @@ export default function Account () {
             Membership
           </button>
         </nav>
+        {renderProfileComponent()}
   
       </div>
-
     </PageLayout>
   )
 
