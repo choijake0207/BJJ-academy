@@ -14,10 +14,10 @@ export default function MembershipPlans() {
                     <div className={profileUser.membership.type === plan.type ? "active plan": "plan"} id={plan.type}key={plan.id}>
                         <header>
                             <h4>{plan.type}</h4>
-                            <h4>${plan.month}/month</h4>
+                            <h4>${plan.month} <span>/ month</span></h4>
                         </header>
-                        <p><i>Annual Sum: {plan.year}</i></p>
-                        <button>Cancel</button> 
+                        <p><i>Annual Sum: ${plan.year}</i></p>
+                        <button>{profileUser.membership.type === plan.type ? "Cancel" : "Switch"}</button> 
                     </div>
                 )
             })}
