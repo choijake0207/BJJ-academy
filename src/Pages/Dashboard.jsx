@@ -7,7 +7,7 @@ import { AuthContext } from '../Context/AuthContext'
 export default function Dashboard() {
 
   const {authUser} = useContext(AuthContext)
-  const isStudent = authUser.role === "member"
+  const isStudent = authUser.role === "Student"
   return (
     <PageLayout pageType={"Dashboard"}>
       <div className="dashboard">
