@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import { AuthContext } from '../../Context/AuthContext'
+import {PlusCircle} from "phosphor-react"
 
 export function PayCard({bank, number, name }) {
     return (<div className="pay-card">
@@ -28,7 +29,12 @@ export default function Payment() {
                     />
                 )
             })}
+            <div className="add-payment">
+                <PlusCircle size={"50px"}/>
+                <p>Add Card</p>
+            </div>
         </div>
+        
     </section>
   )
 }
