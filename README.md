@@ -17,7 +17,7 @@ As a front-end only application, there are some architectural decisions that mus
 - No authentication middleware
 - No persistent authenticator
 
-  # Work-In-Progress Notes
+  ### Work-In-Progress Notes
   - Might align to full stack as much as possible by:
         - creating mock APIs
         - using localStorage as mock DB
