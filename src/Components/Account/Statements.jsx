@@ -19,7 +19,7 @@ export default function Statements() {
     <section className="statements">
         <h3>Statements</h3>
         <div className="statements-container">
-            {statements.map((statement, index) => {
+            {statements.slice().reverse().map((statement, index) => {
                 return (
                     <div className="statement" key={index}>
                         <p>{statement.period}</p>
