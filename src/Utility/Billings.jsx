@@ -37,7 +37,8 @@ export function BillingsUtil (user) {
     for (let m = 0; m < monthsElapsed; m++) {
         const charge = {
             period: `${String(currentMonth + 1).padStart(2, "0")}/${currentYear}`,
-            cost: monthCost
+            cost: monthCost,
+            details: type
         }
         chargesList.push(charge)
         currentMonth++
