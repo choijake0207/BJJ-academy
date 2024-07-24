@@ -18,19 +18,18 @@ export default function Statements() {
   return (
     <section className="statements">
         <h3>Statements</h3>
-       
+        <div className="info-bar">
+            <p>DATE</p>
+            <p>DETAILS</p>
+            <p>AMOUNT</p>
+        </div>
         <div className="statements-container">
-            <div className="info-bar">
-                <p>DATE</p>
-                <p>DETAILS</p>
-                <p>COST</p>
-            </div>
             {statements.slice().reverse().map((statement, index) => {
                 return (
                     <div className="statement" key={index}>
-                        <p>{statement.period}</p>
-                        <p>{statement.details}</p>
-                        <p>{statement.cost}</p>
+                        <p className="statement-period">{statement.period}</p>
+                        <p className="statement-details">{statement.details} Plan</p>
+                        <p className="statement-cost">${statement.cost}</p>
                     </div>
                 )
             })}
