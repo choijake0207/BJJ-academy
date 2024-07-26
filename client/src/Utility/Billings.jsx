@@ -1,4 +1,5 @@
-import { Users, Memberships } from "../Assets/Users";
+import { Users } from "../Models/User";
+import { Memberships } from "../Models/Membership";
 
 // get membership monthly cost
 function getMonthlyCharge(type) {

@@ -1,5 +1,5 @@
 import React, {createContext, useState} from 'react'
-import { Users } from '../Assets/Users'
+import { Users } from "../Models/User"
 
 export const AuthContext = createContext(null)
 

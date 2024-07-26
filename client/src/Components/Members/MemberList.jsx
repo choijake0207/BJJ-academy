@@ -1,5 +1,5 @@
 import React from 'react'
-import {Users} from "../../Assets/Users"
+import {Users} from "../../Models/User"
 import {User} from "phosphor-react"
  
 export default function MemberList() {
