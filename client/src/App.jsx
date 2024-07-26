@@ -10,17 +10,25 @@ import Members from './Pages/Members'
 import "./App.css"
 
 
+// protected route
+const ProtectedRoute = () => {
+  const {authUser} = useContext(AuthContext)
+  return authUser ? <Outlet/> : <Navigate to="/login"/>
+}
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout/>}>
+    <>
       <Route path="/login" element={<Login/>}/>
-      <Route index element={<Dashboard/>}/>
-      <Route path="/classes" element={<Classes/>}/>
-      <Route path="/account" element={<Account/>}/>
-      <Route path="/members" element={<Members/>}/>
-
-    </Route>
+      <Route element={<ProtectedRoute/>}>
+        <Route path="/" element={<RootLayout/>}>
+          <Route index element={<Dashboard/>}/>
+          <Route path="/classes" element={<Classes/>}/>
+          <Route path="/account" element={<Account/>}/>
+          <Route path="/members" element={<Members/>}/>
+        </Route>
+      </Route>
+    </>
   )
 )
 
