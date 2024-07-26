@@ -7,8 +7,7 @@ import "../Styles/Login.css"
 export default function RootLayout() {
   const {authUser, logout} = useContext(AuthContext)
   return (
-    <>
-      {authUser ? 
+  
         <div className="root-layout">
           <header className="header">
             <h1>BJJ MGMT SYSTEMS</h1>
@@ -29,9 +28,9 @@ export default function RootLayout() {
             </nav>
             <main className="root-main"><Outlet/></main>
           </div>
-        </div> : 
-        <Login/>
-      } 
-    </>
+        </div> 
+
+    
+    
   )
 }
