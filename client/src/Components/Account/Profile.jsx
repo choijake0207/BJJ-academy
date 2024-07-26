@@ -8,11 +8,11 @@ export default function Profile() {
     const profileUser = authUser //make seperate const for profile User for viewing other accounts
     const [isEdit, setIsEdit] = useState(false)
     const [editData, setEditData] = useState({
-        firstName: profileUser.firstName,
-        lastName: profileUser.lastName,
-        email: profileUser.email,
-        phone: profileUser.phone,
-        emergency: profileUser.emergency
+        firstName: profileUser.personal.firstName,
+        lastName: profileUser.personal.lastName,
+        email: profileUser.personal.email,
+        phone: profileUser.personal.phone,
+        emergency: profileUser.personal.emergency
     })
     const handleEditChange  = (e) => {
         const {name, value} = e.target
@@ -33,7 +33,7 @@ export default function Profile() {
             <h3>Profile</h3>
             <User size={"70px"}/>
             <div className="public-details">
-                <h4>{profileUser.firstName} {profileUser.lastName}</h4>
+                <h4>{profileUser.personal.firstName} {profileUser.personal.lastName}</h4>
                 <p>{profileUser.role}</p>
             </div>
         </section>
@@ -47,7 +47,7 @@ export default function Profile() {
                         name="firstName"
                         value={editData.firstName}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.firstName}</p>
+                    /> : <p>{profileUser.personal.firstName}</p>
                 }
                 <label>Last Name:</label>
                 {isEdit ? 
@@ -56,7 +56,7 @@ export default function Profile() {
                         name="lastName"
                         value={editData.lastName}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.lastName}</p>
+                    /> : <p>{profileUser.personal.lastName}</p>
                 }
                 <label>Email:</label>
                 {isEdit ? 
@@ -65,7 +65,7 @@ export default function Profile() {
                         name="email"
                         value={editData.email}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.email}</p>
+                    /> : <p>{profileUser.personal.email}</p>
                 }
                 <label>Phone:</label>
                 {isEdit ? 
@@ -74,7 +74,7 @@ export default function Profile() {
                         name="phone"
                         value={editData.phone}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.phone}</p>
+                    /> : <p>{profileUser.personal.phone}</p>
                 }
                 <label>Emergency Contact:</label>
                 {isEdit ? 
@@ -83,7 +83,7 @@ export default function Profile() {
                         name="emergency"
                         value={editData.emergency}
                         onChange={(e) => handleEditChange(e)}
-                    /> : <p>{profileUser.emergency}</p>
+                    /> : <p>{profileUser.personal.emergency}</p>
                 }
             </div>
             <button onClick={toggleEdit}>

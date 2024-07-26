@@ -14,7 +14,7 @@ export function PayCard({bank, number, name }) {
 export default function Payment() {
     const {authUser} = useContext(AuthContext)
     const profileUser = authUser
-    const paymentMethods = profileUser.payment
+    const paymentMethods = profileUser.membership.payment
   return (
     <section className="payment">
         <h3>Payment Methods</h3>

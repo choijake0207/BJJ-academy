@@ -7,7 +7,7 @@ import { AuthContext } from '../../Context/AuthContext'
 
 export default function CheckList({isStudent}) {
     const {handlePropertyChange, authUser} = useContext(AuthContext)
-    const [list, setList] = useState(authUser ? authUser.todos : [])
+    const [list, setList] = useState(authUser ? authUser.activity.todos : [])
     const [formOn, setFormOn] = useState(false)
 
     useEffect(() => {

@@ -9,7 +9,7 @@ export default function MemberList() {
             return (
                 <li className="member-list-item"key={user.id}>
                     <User size={"4em"}/>
-                    <h4>{user.firstName} {user.lastName}</h4>
+                    <h4>{user.personal.firstName} {user.personal.lastName}</h4>
                     <p><i>{user.role}</i></p>
                     {user.role === "Student" && 
                         <p style={{color: "grey"}}>Joined {user.membership.start}</p>

@@ -1,17 +1,17 @@
-import React, {createContext, useState} from 'react'
+import React, {act, createContext, useEffect, useState} from 'react'
 import { Users } from "../Models/User"
 
 export const AuthContext = createContext(null)
 
-// right now, every function updates both state and local storage
-// eventually, move state updaters into useEffect and initialize state from local storage
+
 
 export function AuthContextProvider ({children}) {
 
     const [authUser, setAuthUser] = useState(() => {
-        const savedUser = localStorage.getItem("user") // to initialize state across sessions
-        return savedUser ? JSON.parse(savedUser) : null
+        const activeUser = localStorage.getItem("user") // initialize state from localStorage to preserve session data
+        return activeUser ? JSON.parse(activeUser) : null   // initializer only runs once on mount
     })
+    
 
     //handler is updating both state and storage => move state updater into useEFfect
     const handlePropertyChange = (property, value) => {
@@ -21,16 +21,15 @@ export function AuthContextProvider ({children}) {
             return updatedUser
         })
     }
-
+    // login function sets localStorage to user object instance
     const login = ({username, password}) => {
         const user = Users.find(user => user.username === username && user.password === password)
         if (!user) {
             console.log("Incorrect Credentials")
             alert("Incorrect Credentials")
         } else {
-            setAuthUser(user)
             localStorage.setItem("user", JSON.stringify(user))
-            console.log("Login Success")
+            setAuthUser(user)           
         }
     }
 
