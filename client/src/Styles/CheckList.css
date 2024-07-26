@@ -1,0 +1,22 @@
+
+.checklist-component {
+    border-radius: 5px;
+    padding: 15px;
+    background: var(--component-background);
+    box-shadow: 2px 2px 5px  rgb(190, 190, 190);
+    min-width: 300px;
+
+}
+
+.checklist {
+    border-radius: 5px;
+    height: 200px;
+    overflow: scroll;
+    padding: 0;
+    border: 1px solid black;
+}
+.list-item {
+    list-style-type: none;
+    border: 1px solid red;
+    margin: 10px;
+}

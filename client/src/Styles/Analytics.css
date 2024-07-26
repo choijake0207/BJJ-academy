@@ -1,0 +1,17 @@
+.analytics-bar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.analytics-widget {
+    background: var(--component-background);
+    box-shadow: 2px 2px 5px  rgb(190, 190, 190);
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 250px;
+}
+

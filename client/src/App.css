@@ -1,0 +1,120 @@
+/* Global and Root Styles */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: rgb(236, 239, 245);
+    --component-background: rgb(254, 254, 254);
+    --nav-background: rgb(25,27,36);
+    --flash-1: rgb(61, 67, 220);
+}
+body {
+    margin: 0;
+    background: var(--background-color);
+    font-family: "rubik";
+    overflow: hidden;
+}
+button {
+    font-family: rubik;
+    cursor: pointer;
+}
+.root-layout {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 1fr;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background: white;
+    color: white;
+    font-style: italic;
+    font-size: .7em;
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.335); */
+    z-index: 1000;
+}
+
+.header h1 {
+    font-family: saira;
+    padding-left: 15px;
+    color: var(--flash-1)
+
+}
+.content-columns {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    overflow: hidden;
+}
+.side-nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: var(--nav-background);
+    color: white; 
+}
+
+.side-nav-bar a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.419);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    transition: .2s;
+}
+.side-nav-bar .active {
+    color: white;
+    font-weight: bolder;
+    
+}
+.side-nav-bar svg {
+    font-size: 1.5em;
+}
+.side-nav-bar button {
+    margin-top: auto;
+    margin-bottom: 50px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.506);
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.533);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    place-self: center;
+    width: 150px;
+}
+.side-nav-bar button:hover {
+    border: 1px solid rgb(211, 39, 39);
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.root-main {
+    padding: 15px;
+    overflow: scroll;
+}
+    /* Page Layout */
+
+.page-header {
+    background: var(--component-background);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight:100;
+    /* box-shadow: 2px 2px 5px  rgb(190, 190, 190); */
+    min-width: 820px;
+}
+.page-header p {
+    font-weight: 500;
+}
+
