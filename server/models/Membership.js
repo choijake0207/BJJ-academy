@@ -1,4 +1,4 @@
-export const Memberships = [
+const Memberships = [
     {
         id: 0,
         type: "Standard",
@@ -12,3 +12,4 @@ export const Memberships = [
         year: 1800
     }
 ]
+module.exports = Memberships

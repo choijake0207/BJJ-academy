@@ -1,4 +1,4 @@
-export const Classes = [
+const Classes = [
     {
         id: 101,
         name: "NoGi Fundamentals",
@@ -36,3 +36,5 @@ export const Classes = [
         day: "Sunday"
     }
 ]
+
+module.exports = Classes
