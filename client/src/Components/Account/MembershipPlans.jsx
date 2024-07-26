@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react'
 import {AuthContext} from "../../Context/AuthContext"
-import { Memberships } from '../../Assets/Users'
+import { Memberships } from '../../Models/Membership'
 
 export default function MembershipPlans() {
     const {authUser} = useContext(AuthContext)
