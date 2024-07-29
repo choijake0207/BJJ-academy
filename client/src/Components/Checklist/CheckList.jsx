@@ -10,9 +10,9 @@ export default function CheckList({isStudent}) {
     const [list, setList] = useState(authUser ? authUser.activity.todos : [])
     const [formOn, setFormOn] = useState(false)
 
-    // useEffect(() => {
-    //     handlePropertyChange("todos", list) 
-    // }, [list])
+    useEffect(() => {
+        handlePropertyChange("activity.todos", list) 
+    }, [list])
 
     const handleAddItem = (item) => {
         setList(prev => [...prev, item])
