@@ -13,7 +13,7 @@ export function AuthContextProvider ({children}) {
     })
     
 
-    //handler is updating both state and storage => move state updater into useEFfect
+    //handler is only going to update state
     const handlePropertyChange = (property, value) => {
         setAuthUser(prev => {
             const updatedUser = {...prev, [property]: value} 
@@ -21,7 +21,12 @@ export function AuthContextProvider ({children}) {
             return updatedUser
         })
     }
-    // login function sets localStorage to user object instance
+
+    // synchronize local storage to current state
+    useEffect(() => {
+        localStorage.set("user", JSON.stringify(authUser))
+    }, [authUser])
+
     const login = ({username, password}) => {
         const user = Users.find(user => user.username === username && user.password === password)
         if (!user) {
