@@ -14,10 +14,16 @@ export function AuthContextProvider ({children}) {
     
 
     //handler is only going to update state
-    const handlePropertyChange = (property, value) => {
+    const handlePropertyChange = (path, value) => {
         setAuthUser(prev => {
-            const updatedUser = {...prev, [property]: value} 
-            localStorage.setItem("user", JSON.stringify(updatedUser))
+            const updatedUser = {...prev}
+            const keys = path.split(".") 
+            let currentUser = updatedUser
+            keys.slice(0,-1).forEach(key => {
+                if (!currentUser[key]) current[key] = {}
+                currentUser = currentUser[key]
+            })
+            current[keys[keys.length -1]] = value;
             return updatedUser
         })
     }
