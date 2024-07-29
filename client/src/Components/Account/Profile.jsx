@@ -21,7 +21,7 @@ export default function Profile() {
     const toggleEdit = () => {
         if (isEdit) {
             for (const property in editData) {
-                handlePropertyChange(property, editData[property])
+                handlePropertyChange(`personal.${property}`, editData[property])
             }
         }
         setIsEdit(!isEdit)
